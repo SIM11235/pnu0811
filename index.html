@@ -73,6 +73,10 @@
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="../index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center space-x-1.5 font-bold text-blue-600 dark:text-blue-400">
+                        <i class="fa-solid fa-house"></i>
+                        <span>홈</span>
+                    </a>
                     <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition">소개 (About)</a>
                     <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">기술 스택</a>
                     <a href="#reports" class="hover:text-blue-600 dark:hover:text-blue-400 transition">분석 보고서 (Cards)</a>
@@ -117,15 +121,15 @@
                     <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
                         <div class="bg-white/60 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
                             <p class="text-xs text-slate-500">분석 프로젝트</p>
-                            <p class="text-2xl font-bold text-blue-600">6+</p>
+                            <p class="text-2xl font-bold text-blue-600">7+</p>
                         </div>
                         <div class="bg-white/60 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
                             <p class="text-xs text-slate-500">활용 공공데이터</p>
-                            <p class="text-2xl font-bold text-emerald-600">12만+</p>
+                            <p class="text-2xl font-bold text-emerald-600">15만+</p>
                         </div>
                         <div class="bg-white/60 dark:bg-slate-800/60 p-3 rounded-xl border border-slate-100 dark:border-slate-700">
                             <p class="text-xs text-slate-500">보고서 발행</p>
-                            <p class="text-2xl font-bold text-purple-600">2건</p>
+                            <p class="text-2xl font-bold text-purple-600">3건</p>
                         </div>
                     </div>
 
@@ -247,15 +251,16 @@
                 </div>
 
                 <!-- Filter Tabs -->
-                <div class="mt-4 md:mt-0 flex space-x-2 bg-white dark:bg-slate-900 p-1.5 rounded-xl border border-slate-200 dark:border-slate-800">
+                <div class="mt-4 md:mt-0 flex flex-wrap gap-2 bg-white dark:bg-slate-900 p-1.5 rounded-xl border border-slate-200 dark:border-slate-800">
                     <button onclick="filterCards('all')" class="filter-btn active px-4 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 text-white transition">전체 보기</button>
                     <button onclick="filterCards('career')" class="filter-btn px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">대학/진로</button>
                     <button onclick="filterCards('traffic')" class="filter-btn px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">교통데이터</button>
+                    <button onclick="filterCards('drunk')" class="filter-btn px-4 py-1.5 text-xs font-semibold rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">음주운전</button>
                 </div>
             </div>
 
             <!-- Cards Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- CARD 1: 대학알리미 진로 보고서 -->
                 <div class="project-card career group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
@@ -378,6 +383,69 @@
                     <div class="px-6 pb-6 pt-2">
                         <a href="./data2/index.html" class="w-full py-3 px-4 rounded-xl bg-slate-900 dark:bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm transition flex items-center justify-center space-x-2 group-hover:bg-emerald-600">
                             <span>보고서 상세 보기 및 지도/차트</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 3: 음주운전 분석 보고서 -->
+                <div class="project-card drunk traffic group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- Header Banner -->
+                        <div class="h-48 bg-gradient-to-r from-rose-600 via-red-600 to-amber-600 p-6 flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute right-0 bottom-0 opacity-10 text-white text-9xl font-black -mr-6 -mb-6">
+                                <i class="fa-solid fa-wine-glass-empty"></i>
+                            </div>
+                            <div class="flex justify-between items-center z-10">
+                                <span class="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold backdrop-blur-md">
+                                    <i class="fa-solid fa-triangle-exclamation mr-1"></i> 경찰청·도로교통공단
+                                </span>
+                                <span class="text-white/80 text-xs font-medium">2026.02 발행</span>
+                            </div>
+                            <div class="z-10">
+                                <p class="text-rose-100 text-xs font-medium">교통안전 & 음주운전 빅데이터 보고서</p>
+                                <h3 class="text-xl sm:text-2xl font-bold text-white mt-1 group-hover:translate-x-1 transition">
+                                    음주운전 사고 패턴 및 재범 위험지역 시·공간 분석
+                                </h3>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 space-y-4">
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                경찰청 및 도로교통공단의 음주운전 사고 데이터를 기반으로 요일·시간대별 사고 발생 특징과 재범 위험 구역을 도출하고 단속 효율화 방안을 제안합니다.
+                            </p>
+
+                            <!-- Key Metric Chips -->
+                            <div class="grid grid-cols-3 gap-2 py-2">
+                                <div class="bg-rose-50 dark:bg-rose-950/40 p-2.5 rounded-xl border border-rose-100 dark:border-rose-900 text-center">
+                                    <p class="text-[10px] text-rose-600 dark:text-rose-400 font-semibold">분석 사고 건수</p>
+                                    <p class="text-base font-bold text-rose-900 dark:text-rose-200">3만+ 건</p>
+                                </div>
+                                <div class="bg-red-50 dark:bg-red-950/40 p-2.5 rounded-xl border border-red-100 dark:border-red-900 text-center">
+                                    <p class="text-[10px] text-red-600 dark:text-red-400 font-semibold">심야 사고 비중</p>
+                                    <p class="text-base font-bold text-red-900 dark:text-red-200">62.4%</p>
+                                </div>
+                                <div class="bg-amber-50 dark:bg-amber-950/40 p-2.5 rounded-xl border border-amber-100 dark:border-amber-900 text-center">
+                                    <p class="text-[10px] text-amber-600 dark:text-amber-400 font-semibold">위험지역 감축</p>
+                                    <p class="text-base font-bold text-amber-900 dark:text-amber-200">18.5% 기대</p>
+                                </div>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">#음주운전분석</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">#도로교통공단</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">#시공간패턴</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">#단속예측</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Button -->
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="./data3/index.html" class="w-full py-3 px-4 rounded-xl bg-slate-900 dark:bg-rose-600 hover:bg-rose-700 text-white font-medium text-sm transition flex items-center justify-center space-x-2 group-hover:bg-rose-600">
+                            <span>보고서 상세 보기 및 데이터 차트</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
                     </div>
